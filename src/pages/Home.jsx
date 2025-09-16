@@ -71,38 +71,18 @@ const Home = () => {
         {/* Content */}
         <Container>
           <div className="text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: 'easeOut' }}
-              className="space-y-8"
-            >
-              <motion.h1
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, ease: 'easeOut', delay: 0.2 }}
-                className="text-4xl md:text-6xl lg:text-7xl font-bold text-amazon-text-primary dark:text-amazon-white"
-              >
+            <div className="space-y-8">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-amazon-text-primary dark:text-amazon-white">
                 Discover Amazing
                 <span className="block text-amazon-orange">Products</span>
-              </motion.h1>
+              </h1>
 
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, ease: 'easeOut', delay: 0.4 }}
-                className="text-xl md:text-2xl text-amazon-text-muted dark:text-amazon-text-muted max-w-3xl mx-auto"
-              >
+              <p className="text-xl md:text-2xl text-amazon-text-muted dark:text-amazon-text-muted max-w-3xl mx-auto">
                 Shop the latest trends in fashion, tech, and lifestyle. Quality
                 products at unbeatable prices.
-              </motion.p>
+              </p>
 
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, ease: 'easeOut', delay: 0.6 }}
-                className="flex flex-col sm:flex-row gap-4 justify-center"
-              >
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link to="/catalog">
                   <Button size="lg" className="w-full sm:w-auto">
                     Shop Now
@@ -117,18 +97,13 @@ const Home = () => {
                     Featured Items
                   </Button>
                 </Link>
-              </motion.div>
-            </motion.div>
+              </div>
+            </div>
           </div>
         </Container>
 
         {/* Scroll Indicator */}
-        <motion.div
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1, duration: 0.5 }}
-        >
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
           <motion.div
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
@@ -136,7 +111,7 @@ const Home = () => {
           >
             <div className="w-1 h-3 bg-amazon-text-muted dark:bg-amazon-text-muted rounded-full mt-2"></div>
           </motion.div>
-        </motion.div>
+        </div>
       </section>
 
       {/* Categories Section */}

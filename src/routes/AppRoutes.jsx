@@ -44,17 +44,7 @@ const AppRoutes = () => {
       <Routes location={location} key={location.pathname}>
         <Route
           path="/"
-          element={
-            <motion.div
-              variants={pageVariants}
-              initial="initial"
-              animate="in"
-              exit="out"
-              transition={pageTransition}
-            >
-              <Home />
-            </motion.div>
-          }
+          element={<Home />}
         />
         <Route
           path="/catalog"
