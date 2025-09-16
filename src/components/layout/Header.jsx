@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { useCart } from '../../context/CartContext'
 import { useUI } from '../../context/UIContext'
@@ -10,7 +10,6 @@ import SearchBar from '../forms/SearchBar'
 import MobileNav from './MobileNav'
 
 const Header = () => {
-  const navigate = useNavigate()
   const { getTotalItems } = useCart()
   const { toggleCartDrawer, toggleMobileNav } = useUI()
   const { theme, toggleTheme } = useTheme()
@@ -33,8 +32,8 @@ const Header = () => {
       <motion.header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
-        ? 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-md shadow-sm'
-        : 'bg-gray-900'
+            ? 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-md shadow-sm'
+            : 'bg-gray-900'
         }`}
         initial={{ y: -100 }}
         animate={{ y: 0 }}
@@ -49,15 +48,15 @@ const Header = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <span className="text-white font-bold text-lg">A</span>
+                <span className="text-white font-bold text-lg">S</span>
               </motion.div>
-            <span className={`text-xl font-bold transition-colors duration-300 ${
-              isScrolled 
-                ? 'text-gray-900 dark:text-white' 
-                : 'text-white'
-            }`}>
-              SwiftCart
-            </span>
+              <span
+                className={`text-xl font-bold transition-colors duration-300 ${
+                  isScrolled ? 'text-gray-900 dark:text-white' : 'text-white'
+                }`}
+              >
+                SwiftCart
+              </span>
             </Link>
 
             {/* Desktop Navigation */}
@@ -65,8 +64,8 @@ const Header = () => {
               <Link
                 to="/catalog"
                 className={`transition-colors duration-200 ${
-                  isScrolled 
-                    ? 'text-gray-700 dark:text-gray-300 hover:text-orange-500' 
+                  isScrolled
+                    ? 'text-gray-700 dark:text-gray-300 hover:text-orange-500'
                     : 'text-white hover:text-yellow-300'
                 }`}
               >
@@ -75,8 +74,8 @@ const Header = () => {
               <Link
                 to="/catalog?category=sneakers"
                 className={`transition-colors duration-200 ${
-                  isScrolled 
-                    ? 'text-gray-700 dark:text-gray-300 hover:text-orange-500' 
+                  isScrolled
+                    ? 'text-gray-700 dark:text-gray-300 hover:text-orange-500'
                     : 'text-white hover:text-yellow-300'
                 }`}
               >
@@ -85,8 +84,8 @@ const Header = () => {
               <Link
                 to="/catalog?category=apparel"
                 className={`transition-colors duration-200 ${
-                  isScrolled 
-                    ? 'text-gray-700 dark:text-gray-300 hover:text-orange-500' 
+                  isScrolled
+                    ? 'text-gray-700 dark:text-gray-300 hover:text-orange-500'
                     : 'text-white hover:text-yellow-300'
                 }`}
               >
@@ -95,8 +94,8 @@ const Header = () => {
               <Link
                 to="/catalog?category=accessories"
                 className={`transition-colors duration-200 ${
-                  isScrolled 
-                    ? 'text-gray-700 dark:text-gray-300 hover:text-orange-500' 
+                  isScrolled
+                    ? 'text-gray-700 dark:text-gray-300 hover:text-orange-500'
                     : 'text-white hover:text-yellow-300'
                 }`}
               >
@@ -105,8 +104,8 @@ const Header = () => {
               <Link
                 to="/catalog?category=tech"
                 className={`transition-colors duration-200 ${
-                  isScrolled 
-                    ? 'text-gray-700 dark:text-gray-300 hover:text-orange-500' 
+                  isScrolled
+                    ? 'text-gray-700 dark:text-gray-300 hover:text-orange-500'
                     : 'text-white hover:text-yellow-300'
                 }`}
               >
@@ -125,10 +124,10 @@ const Header = () => {
               <motion.button
                 onClick={toggleTheme}
                 className={`p-2 rounded-lg transition-colors duration-200 ${
-                isScrolled 
-                  ? 'bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700' 
-                  : 'bg-gray-700 hover:bg-gray-600'
-              }`}
+                  isScrolled
+                    ? 'bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700'
+                    : 'bg-gray-700 hover:bg-gray-600'
+                }`}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 aria-label="Toggle theme"
@@ -137,22 +136,34 @@ const Header = () => {
                   name={theme === 'dark' ? 'sun' : 'moon'}
                   size="md"
                   className={`transition-colors duration-300 ${
-                  isScrolled 
-                    ? 'text-gray-700 dark:text-gray-300' 
-                    : 'text-white'
-                }`}
+                    isScrolled
+                      ? 'text-gray-700 dark:text-gray-300'
+                      : 'text-white'
+                  }`}
                 />
               </motion.button>
 
               {/* Cart Button */}
               <motion.button
                 onClick={toggleCartDrawer}
-                className="relative p-2 rounded-lg bg-amazon-nav-hover hover:bg-amazon-nav-dark transition-colors duration-200"
+                className={`relative p-2 rounded-lg transition-colors duration-200 ${
+                  isScrolled
+                    ? 'bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700'
+                    : 'bg-gray-700 hover:bg-gray-600'
+                }`}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 aria-label="Shopping cart"
               >
-                <Icon name="cart" size="md" className="text-amazon-white" />
+                <Icon 
+                  name="cart" 
+                  size="md" 
+                  className={`transition-colors duration-300 ${
+                    isScrolled
+                      ? 'text-gray-700 dark:text-gray-300'
+                      : 'text-white'
+                  }`} 
+                />
                 {cartItemCount > 0 && (
                   <motion.span
                     className="absolute -top-1 -right-1 bg-yellow-400 text-gray-900 text-xs rounded-full h-5 w-5 flex items-center justify-center"
@@ -168,12 +179,24 @@ const Header = () => {
               {/* Mobile Menu Button */}
               <motion.button
                 onClick={toggleMobileNav}
-                className="md:hidden p-2 rounded-lg bg-amazon-nav-hover hover:bg-amazon-nav-dark transition-colors duration-200"
+                className={`md:hidden p-2 rounded-lg transition-colors duration-200 ${
+                  isScrolled
+                    ? 'bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700'
+                    : 'bg-gray-700 hover:bg-gray-600'
+                }`}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 aria-label="Open menu"
               >
-                <Icon name="menu" size="md" className="text-amazon-white" />
+                <Icon 
+                  name="menu" 
+                  size="md" 
+                  className={`transition-colors duration-300 ${
+                    isScrolled
+                      ? 'text-gray-700 dark:text-gray-300'
+                      : 'text-white'
+                  }`} 
+                />
               </motion.button>
             </div>
           </div>
