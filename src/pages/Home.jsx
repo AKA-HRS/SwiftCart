@@ -62,15 +62,15 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
         {/* Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-900 dark:to-gray-800">
-          <div className="absolute inset-0 bg-[url('/images/hero-pattern.svg')] opacity-5"></div>
+          <div className="absolute inset-0 bg-[url('/images/hero-pattern.svg')] opacity-5 "></div>
         </div>
 
         {/* Content */}
         <Container>
-          <div className="text-center">
+          <div className="text-center relative z-10">
             <div className="space-y-8">
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white">
                 Discover Amazing
@@ -103,7 +103,7 @@ const Home = () => {
         </Container>
 
         {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
           <motion.div
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
@@ -202,7 +202,7 @@ const Home = () => {
                 style tips
               </p>
 
-              <div className="max-w-md mx-auto flex gap-2">
+              <div className="max-w-md mx-auto flex flex-col sm:flex-row gap-2">
                 <input
                   type="email"
                   placeholder="Enter your email"

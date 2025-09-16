@@ -45,7 +45,7 @@ const Footer = () => {
   ]
 
   return (
-      <footer className="bg-gray-900 border-t border-gray-800">
+    <footer className="bg-gray-900 border-t border-gray-800">
       <div className="container-custom">
         {/* Main Footer Content */}
         <motion.div
@@ -61,9 +61,7 @@ const Footer = () => {
               <div className="w-8 h-8 bg-orange-500 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg">A</span>
               </div>
-                <span className="text-xl font-bold text-white">
-                  SwiftCart
-                </span>
+              <span className="text-xl font-bold text-white">SwiftCart</span>
             </Link>
             <p className="text-gray-400 mb-6">
               Discover amazing products at great prices. Your one-stop shop for
@@ -74,7 +72,7 @@ const Footer = () => {
                 <motion.a
                   key={social.name}
                   href={social.href}
-                    className="p-2 rounded-lg bg-gray-800 hover:bg-orange-500 hover:text-white transition-colors duration-200"
+                  className="p-2 rounded-lg bg-gray-800 hover:bg-orange-500 hover:text-white transition-colors duration-200"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   aria-label={social.name}
@@ -87,15 +85,13 @@ const Footer = () => {
 
           {/* Shop Links */}
           <div>
-              <h3 className="text-lg font-semibold text-white mb-4">
-              Shop
-            </h3>
+            <h3 className="text-lg font-semibold text-white mb-4">Shop</h3>
             <ul className="space-y-2">
               {footerLinks.shop.map(link => (
                 <li key={link.name}>
                   <Link
                     to={link.href}
-                      className="text-gray-400 hover:text-orange-500 transition-colors duration-200"
+                    className="text-gray-400 hover:text-orange-500 transition-colors duration-200"
                   >
                     {link.name}
                   </Link>
@@ -106,15 +102,13 @@ const Footer = () => {
 
           {/* Support Links */}
           <div>
-              <h3 className="text-lg font-semibold text-white mb-4">
-              Support
-            </h3>
+            <h3 className="text-lg font-semibold text-white mb-4">Support</h3>
             <ul className="space-y-2">
               {footerLinks.support.map(link => (
                 <li key={link.name}>
                   <Link
                     to={link.href}
-                      className="text-gray-400 hover:text-orange-500 transition-colors duration-200"
+                    className="text-gray-400 hover:text-orange-500 transition-colors duration-200"
                   >
                     {link.name}
                   </Link>
@@ -125,15 +119,13 @@ const Footer = () => {
 
           {/* Company Links */}
           <div>
-              <h3 className="text-lg font-semibold text-white mb-4">
-              Company
-            </h3>
+            <h3 className="text-lg font-semibold text-white mb-4">Company</h3>
             <ul className="space-y-2">
               {footerLinks.company.map(link => (
                 <li key={link.name}>
                   <Link
                     to={link.href}
-                      className="text-gray-400 hover:text-orange-500 transition-colors duration-200"
+                    className="text-gray-400 hover:text-orange-500 transition-colors duration-200"
                   >
                     {link.name}
                   </Link>
@@ -144,15 +136,13 @@ const Footer = () => {
 
           {/* Legal Links */}
           <div>
-              <h3 className="text-lg font-semibold text-white mb-4">
-              Legal
-            </h3>
+            <h3 className="text-lg font-semibold text-white mb-4">Legal</h3>
             <ul className="space-y-2">
               {footerLinks.legal.map(link => (
                 <li key={link.name}>
                   <Link
                     to={link.href}
-                      className="text-gray-400 hover:text-orange-500 transition-colors duration-200"
+                    className="text-gray-400 hover:text-orange-500 transition-colors duration-200"
                   >
                     {link.name}
                   </Link>
@@ -164,21 +154,21 @@ const Footer = () => {
 
         {/* Newsletter Signup */}
         <motion.div
-            className="py-8 border-t border-gray-800"
+          className="py-8 border-t border-gray-800"
           variants={fadeInUp}
           initial="initial"
           whileInView="animate"
           viewport={{ once: true }}
         >
           <div className="max-w-md mx-auto text-center">
-              <h3 className="text-lg font-semibold text-white mb-2">
+            <h3 className="text-lg font-semibold text-white mb-2">
               Stay Updated
             </h3>
             <p className="text-gray-400 mb-4">
               Subscribe to our newsletter for the latest products and exclusive
               offers.
             </p>
-            <div className="flex gap-2">
+            <div className="flex flex-col sm:flex-row gap-2">
               <input
                 type="email"
                 placeholder="Enter your email"
@@ -197,15 +187,15 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <motion.div
-            className="py-6 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center"
+          className="py-6 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center"
           variants={fadeInUp}
           initial="initial"
           whileInView="animate"
           viewport={{ once: true }}
         >
-            <p className="text-gray-400 text-sm">
-              © {currentYear} SwiftCart. All rights reserved.
-            </p>
+          <p className="text-gray-400 text-sm">
+            © {currentYear} SwiftCart. All rights reserved.
+          </p>
           <div className="flex items-center space-x-4 mt-4 md:mt-0">
             <span className="text-gray-400 text-sm">
               Made with ❤️ for modern shoppers
