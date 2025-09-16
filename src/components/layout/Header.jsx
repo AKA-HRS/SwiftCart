@@ -33,8 +33,8 @@ const Header = () => {
       <motion.header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? 'bg-amazon-white/95 dark:bg-amazon-nav-darker/95 backdrop-blur-md shadow-sm'
-            : 'bg-amazon-nav-darker'
+        ? 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-md shadow-sm'
+        : 'bg-gray-900'
         }`}
         initial={{ y: -100 }}
         animate={{ y: 0 }}
@@ -45,13 +45,13 @@ const Header = () => {
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-2">
               <motion.div
-                className="w-8 h-8 bg-amazon-orange rounded-lg flex items-center justify-center"
+                className="w-8 h-8 bg-orange-500 rounded-lg flex items-center justify-center"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 <span className="text-white font-bold text-lg">A</span>
               </motion.div>
-            <span className="text-xl font-bold text-amazon-white">
+            <span className="text-xl font-bold text-white">
               SwiftCart
             </span>
             </Link>
@@ -60,31 +60,31 @@ const Header = () => {
             <nav className="hidden md:flex items-center space-x-8">
               <Link
                 to="/catalog"
-                className="text-amazon-white hover:text-amazon-search-accent transition-colors duration-200"
+                className="text-white hover:text-yellow-300 transition-colors duration-200"
               >
                 All Products
               </Link>
               <Link
                 to="/catalog?category=sneakers"
-                className="text-amazon-white hover:text-amazon-search-accent transition-colors duration-200"
+                className="text-white hover:text-yellow-300 transition-colors duration-200"
               >
                 Sneakers
               </Link>
               <Link
                 to="/catalog?category=apparel"
-                className="text-amazon-white hover:text-amazon-search-accent transition-colors duration-200"
+                className="text-white hover:text-yellow-300 transition-colors duration-200"
               >
                 Apparel
               </Link>
               <Link
                 to="/catalog?category=accessories"
-                className="text-amazon-white hover:text-amazon-search-accent transition-colors duration-200"
+                className="text-white hover:text-yellow-300 transition-colors duration-200"
               >
                 Accessories
               </Link>
               <Link
                 to="/catalog?category=tech"
-                className="text-amazon-white hover:text-amazon-search-accent transition-colors duration-200"
+                className="text-white hover:text-yellow-300 transition-colors duration-200"
               >
                 Tech
               </Link>
@@ -100,7 +100,7 @@ const Header = () => {
               {/* Theme Toggle */}
               <motion.button
                 onClick={toggleTheme}
-                className="p-2 rounded-lg bg-amazon-nav-hover hover:bg-amazon-nav-dark transition-colors duration-200"
+                className="p-2 rounded-lg bg-gray-700 hover:bg-gray-600 transition-colors duration-200"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 aria-label="Toggle theme"
@@ -108,7 +108,7 @@ const Header = () => {
                 <Icon
                   name={theme === 'dark' ? 'sun' : 'moon'}
                   size="md"
-                  className="text-amazon-white"
+                  className="text-white"
                 />
               </motion.button>
 
@@ -123,7 +123,7 @@ const Header = () => {
                 <Icon name="cart" size="md" className="text-amazon-white" />
                 {cartItemCount > 0 && (
                   <motion.span
-                    className="absolute -top-1 -right-1 bg-amazon-cart-yellow text-amazon-text-primary text-xs rounded-full h-5 w-5 flex items-center justify-center"
+                    className="absolute -top-1 -right-1 bg-yellow-400 text-gray-900 text-xs rounded-full h-5 w-5 flex items-center justify-center"
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
                     transition={{ type: 'spring', stiffness: 500, damping: 30 }}

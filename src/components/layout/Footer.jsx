@@ -45,7 +45,7 @@ const Footer = () => {
   ]
 
   return (
-    <footer className="bg-amazon-nav-darker border-t border-amazon-nav-dark">
+      <footer className="bg-gray-900 border-t border-gray-800">
       <div className="container-custom">
         {/* Main Footer Content */}
         <motion.div
@@ -58,14 +58,14 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="lg:col-span-1">
             <Link to="/" className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-amazon-orange rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 bg-orange-500 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg">A</span>
               </div>
-                <span className="text-xl font-bold text-amazon-white">
+                <span className="text-xl font-bold text-white">
                   SwiftCart
                 </span>
             </Link>
-            <p className="text-amazon-text-muted mb-6">
+            <p className="text-gray-400 mb-6">
               Discover amazing products at great prices. Your one-stop shop for
               modern lifestyle essentials.
             </p>
@@ -74,7 +74,7 @@ const Footer = () => {
                 <motion.a
                   key={social.name}
                   href={social.href}
-                  className="p-2 rounded-lg bg-amazon-nav-dark hover:bg-amazon-orange hover:text-white transition-colors duration-200"
+                    className="p-2 rounded-lg bg-gray-800 hover:bg-orange-500 hover:text-white transition-colors duration-200"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   aria-label={social.name}
@@ -87,7 +87,7 @@ const Footer = () => {
 
           {/* Shop Links */}
           <div>
-            <h3 className="text-lg font-semibold text-amazon-white mb-4">
+              <h3 className="text-lg font-semibold text-white mb-4">
               Shop
             </h3>
             <ul className="space-y-2">
@@ -95,7 +95,7 @@ const Footer = () => {
                 <li key={link.name}>
                   <Link
                     to={link.href}
-                    className="text-amazon-text-muted hover:text-amazon-orange transition-colors duration-200"
+                      className="text-gray-400 hover:text-orange-500 transition-colors duration-200"
                   >
                     {link.name}
                   </Link>
@@ -106,7 +106,7 @@ const Footer = () => {
 
           {/* Support Links */}
           <div>
-            <h3 className="text-lg font-semibold text-amazon-white mb-4">
+              <h3 className="text-lg font-semibold text-white mb-4">
               Support
             </h3>
             <ul className="space-y-2">
@@ -114,7 +114,7 @@ const Footer = () => {
                 <li key={link.name}>
                   <Link
                     to={link.href}
-                    className="text-amazon-text-muted hover:text-amazon-orange transition-colors duration-200"
+                      className="text-gray-400 hover:text-orange-500 transition-colors duration-200"
                   >
                     {link.name}
                   </Link>
@@ -125,7 +125,7 @@ const Footer = () => {
 
           {/* Company Links */}
           <div>
-            <h3 className="text-lg font-semibold text-amazon-white mb-4">
+              <h3 className="text-lg font-semibold text-white mb-4">
               Company
             </h3>
             <ul className="space-y-2">
@@ -133,7 +133,7 @@ const Footer = () => {
                 <li key={link.name}>
                   <Link
                     to={link.href}
-                    className="text-amazon-text-muted hover:text-amazon-orange transition-colors duration-200"
+                      className="text-gray-400 hover:text-orange-500 transition-colors duration-200"
                   >
                     {link.name}
                   </Link>
@@ -144,7 +144,7 @@ const Footer = () => {
 
           {/* Legal Links */}
           <div>
-            <h3 className="text-lg font-semibold text-amazon-white mb-4">
+              <h3 className="text-lg font-semibold text-white mb-4">
               Legal
             </h3>
             <ul className="space-y-2">
@@ -152,7 +152,7 @@ const Footer = () => {
                 <li key={link.name}>
                   <Link
                     to={link.href}
-                    className="text-amazon-text-muted hover:text-amazon-orange transition-colors duration-200"
+                      className="text-gray-400 hover:text-orange-500 transition-colors duration-200"
                   >
                     {link.name}
                   </Link>
@@ -164,17 +164,17 @@ const Footer = () => {
 
         {/* Newsletter Signup */}
         <motion.div
-          className="py-8 border-t border-amazon-nav-dark"
+            className="py-8 border-t border-gray-800"
           variants={fadeInUp}
           initial="initial"
           whileInView="animate"
           viewport={{ once: true }}
         >
           <div className="max-w-md mx-auto text-center">
-            <h3 className="text-lg font-semibold text-amazon-white mb-2">
+              <h3 className="text-lg font-semibold text-white mb-2">
               Stay Updated
             </h3>
-            <p className="text-amazon-text-muted mb-4">
+            <p className="text-gray-400 mb-4">
               Subscribe to our newsletter for the latest products and exclusive
               offers.
             </p>
@@ -182,10 +182,10 @@ const Footer = () => {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-2 border border-amazon-border-gray rounded-lg bg-amazon-white text-amazon-text-primary placeholder-amazon-text-muted focus:outline-none focus:ring-2 focus:ring-amazon-orange focus:border-transparent"
+                className="flex-1 px-4 py-2 border border-gray-600 rounded-lg bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
               />
               <motion.button
-                className="px-6 py-2 bg-amazon-orange text-white rounded-lg hover:bg-amazon-orange-hover transition-colors duration-200"
+                className="px-6 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors duration-200"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -197,17 +197,17 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <motion.div
-          className="py-6 border-t border-amazon-nav-dark flex flex-col md:flex-row justify-between items-center"
+            className="py-6 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center"
           variants={fadeInUp}
           initial="initial"
           whileInView="animate"
           viewport={{ once: true }}
         >
-            <p className="text-amazon-text-muted text-sm">
+            <p className="text-gray-400 text-sm">
               © {currentYear} SwiftCart. All rights reserved.
             </p>
           <div className="flex items-center space-x-4 mt-4 md:mt-0">
-            <span className="text-amazon-text-muted text-sm">
+            <span className="text-gray-400 text-sm">
               Made with ❤️ for modern shoppers
             </span>
           </div>
