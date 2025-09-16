@@ -64,7 +64,7 @@ const Home = () => {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary-50 to-primary-100 dark:from-gray-900 dark:to-gray-800">
+        <div className="absolute inset-0 bg-gradient-to-br from-amazon-bg-light to-amazon-bg-lighter dark:from-amazon-nav-darker dark:to-amazon-nav-dark">
           <div className="absolute inset-0 bg-[url('/images/hero-pattern.svg')] opacity-5"></div>
         </div>
 
@@ -72,29 +72,35 @@ const Home = () => {
         <Container>
           <div className="text-center">
             <motion.div
-              variants={heroVariants}
-              initial="initial"
-              animate="animate"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: 'easeOut' }}
               className="space-y-8"
             >
               <motion.h1
-                variants={heroTextVariants}
-                className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: 'easeOut', delay: 0.2 }}
+                className="text-4xl md:text-6xl lg:text-7xl font-bold text-amazon-text-primary dark:text-amazon-white"
               >
                 Discover Amazing
-                <span className="block text-gradient">Products</span>
+                <span className="block text-amazon-orange">Products</span>
               </motion.h1>
 
               <motion.p
-                variants={heroTextVariants}
-                className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: 'easeOut', delay: 0.4 }}
+                className="text-xl md:text-2xl text-amazon-text-muted dark:text-amazon-text-muted max-w-3xl mx-auto"
               >
                 Shop the latest trends in fashion, tech, and lifestyle. Quality
                 products at unbeatable prices.
               </motion.p>
 
               <motion.div
-                variants={heroTextVariants}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: 'easeOut', delay: 0.6 }}
                 className="flex flex-col sm:flex-row gap-4 justify-center"
               >
                 <Link to="/catalog">
@@ -119,24 +125,29 @@ const Home = () => {
         {/* Scroll Indicator */}
         <motion.div
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1, duration: 0.5 }}
         >
-          <div className="w-6 h-10 border-2 border-gray-400 dark:border-gray-600 rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-gray-400 dark:bg-gray-600 rounded-full mt-2"></div>
-          </div>
+          <motion.div
+            animate={{ y: [0, 10, 0] }}
+            transition={{ duration: 2, repeat: Infinity }}
+            className="w-6 h-10 border-2 border-amazon-text-muted dark:border-amazon-text-muted rounded-full flex justify-center"
+          >
+            <div className="w-1 h-3 bg-amazon-text-muted dark:bg-amazon-text-muted rounded-full mt-2"></div>
+          </motion.div>
         </motion.div>
       </section>
 
       {/* Categories Section */}
-      <section className="py-20 bg-white dark:bg-gray-900">
+      <section className="py-20 bg-amazon-white dark:bg-amazon-nav-darker">
         <Container>
           <MotionFadeIn>
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-amazon-text-primary dark:text-amazon-white mb-4">
                 Shop by Category
               </h2>
-              <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+              <p className="text-lg text-amazon-text-muted dark:text-amazon-text-muted max-w-2xl mx-auto">
                 Explore our curated collections designed to match your style and
                 needs
               </p>
@@ -152,18 +163,18 @@ const Home = () => {
                 transition={{ duration: 0.3 }}
               >
                 <Link to={category.href}>
-                  <div className="relative overflow-hidden rounded-xl bg-gray-100 dark:bg-gray-800 aspect-square mb-4">
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary-500 to-primary-600 opacity-80 group-hover:opacity-90 transition-opacity duration-300"></div>
+                  <div className="relative overflow-hidden rounded-xl bg-amazon-bg-lighter dark:bg-amazon-nav-dark aspect-square mb-4">
+                    <div className="absolute inset-0 bg-gradient-to-br from-amazon-orange to-amazon-orange-buy opacity-80 group-hover:opacity-90 transition-opacity duration-300"></div>
                     <div className="absolute inset-0 flex items-center justify-center">
                       <h3 className="text-2xl font-bold text-white text-center">
                         {category.name}
                       </h3>
                     </div>
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                  <h3 className="text-xl font-semibold text-amazon-text-primary dark:text-amazon-white mb-2">
                     {category.name}
                   </h3>
-                  <p className="text-gray-600 dark:text-gray-400">
+                  <p className="text-amazon-text-muted dark:text-amazon-text-muted">
                     {category.description}
                   </p>
                 </Link>
@@ -174,14 +185,14 @@ const Home = () => {
       </section>
 
       {/* Featured Products Section */}
-      <section className="py-20 bg-gray-50 dark:bg-gray-800">
+      <section className="py-20 bg-amazon-bg-light dark:bg-amazon-nav-dark">
         <Container>
           <MotionFadeIn>
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-amazon-text-primary dark:text-amazon-white mb-4">
                 Featured Products
               </h2>
-              <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+              <p className="text-lg text-amazon-text-muted dark:text-amazon-text-muted max-w-2xl mx-auto">
                 Handpicked items that our customers love
               </p>
             </div>
@@ -204,14 +215,14 @@ const Home = () => {
       </section>
 
       {/* Newsletter Section */}
-      <section className="py-20 bg-primary-600">
+      <section className="py-20 bg-amazon-orange">
         <Container>
           <MotionFadeIn>
             <div className="text-center text-white">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
                 Stay in the Loop
               </h2>
-              <p className="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
+              <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
                 Get the latest updates on new products, exclusive deals, and
                 style tips
               </p>
@@ -220,14 +231,14 @@ const Home = () => {
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white"
+                  className="flex-1 px-4 py-3 rounded-lg text-amazon-text-primary placeholder-amazon-text-muted focus:outline-none focus:ring-2 focus:ring-white"
                 />
                 <Button variant="secondary" size="lg">
                   Subscribe
                 </Button>
               </div>
 
-              <p className="text-sm text-primary-200 mt-4">
+              <p className="text-sm text-white/80 mt-4">
                 No spam, unsubscribe at any time
               </p>
             </div>
