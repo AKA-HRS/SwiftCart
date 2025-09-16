@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { motion } from 'framer-motion'
+import { motion } from 'framer-motion' // eslint-disable-line no-unused-vars
 import { productsApi } from '../services/api'
-import {
-  heroVariants,
-  heroTextVariants,
-  fadeInUp,
-} from '../components/animations/motionVariants'
+// import {
+//   heroVariants,
+//   heroTextVariants,
+//   fadeInUp,
+// } from '../components/animations/motionVariants'
 import ProductGrid from '../components/product/ProductGrid'
 import Button from '../components/common/Button'
 import Container from '../components/layout/Container'
@@ -169,7 +169,7 @@ const Home = () => {
           </MotionFadeIn>
 
           <MotionStagger className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {categories.map((category, index) => (
+            {categories.map(category => (
               <motion.div
                 key={category.name}
                 className="group"

@@ -1,10 +1,9 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { motion } from 'framer-motion'
+import { motion } from 'framer-motion' // eslint-disable-line no-unused-vars
 import { useCart } from '../../context/CartContext'
 import { useUI } from '../../context/UIContext'
 import { useTheme } from '../../context/ThemeContext'
-import Button from '../common/Button'
 import Icon from '../common/Icon'
 import SearchBar from '../forms/SearchBar'
 import MobileNav from './MobileNav'

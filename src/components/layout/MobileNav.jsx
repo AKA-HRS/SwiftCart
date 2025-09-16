@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion' // eslint-disable-line no-unused-vars
 import { useUI } from '../../context/UIContext'
 import { useCart } from '../../context/CartContext'
 import Icon from '../common/Icon'
