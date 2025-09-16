@@ -51,7 +51,11 @@ const Header = () => {
               >
                 <span className="text-white font-bold text-lg">A</span>
               </motion.div>
-            <span className="text-xl font-bold text-white">
+            <span className={`text-xl font-bold transition-colors duration-300 ${
+              isScrolled 
+                ? 'text-gray-900 dark:text-white' 
+                : 'text-white'
+            }`}>
               SwiftCart
             </span>
             </Link>
@@ -60,31 +64,51 @@ const Header = () => {
             <nav className="hidden md:flex items-center space-x-8">
               <Link
                 to="/catalog"
-                className="text-white hover:text-yellow-300 transition-colors duration-200"
+                className={`transition-colors duration-200 ${
+                  isScrolled 
+                    ? 'text-gray-700 dark:text-gray-300 hover:text-orange-500' 
+                    : 'text-white hover:text-yellow-300'
+                }`}
               >
                 All Products
               </Link>
               <Link
                 to="/catalog?category=sneakers"
-                className="text-white hover:text-yellow-300 transition-colors duration-200"
+                className={`transition-colors duration-200 ${
+                  isScrolled 
+                    ? 'text-gray-700 dark:text-gray-300 hover:text-orange-500' 
+                    : 'text-white hover:text-yellow-300'
+                }`}
               >
                 Sneakers
               </Link>
               <Link
                 to="/catalog?category=apparel"
-                className="text-white hover:text-yellow-300 transition-colors duration-200"
+                className={`transition-colors duration-200 ${
+                  isScrolled 
+                    ? 'text-gray-700 dark:text-gray-300 hover:text-orange-500' 
+                    : 'text-white hover:text-yellow-300'
+                }`}
               >
                 Apparel
               </Link>
               <Link
                 to="/catalog?category=accessories"
-                className="text-white hover:text-yellow-300 transition-colors duration-200"
+                className={`transition-colors duration-200 ${
+                  isScrolled 
+                    ? 'text-gray-700 dark:text-gray-300 hover:text-orange-500' 
+                    : 'text-white hover:text-yellow-300'
+                }`}
               >
                 Accessories
               </Link>
               <Link
                 to="/catalog?category=tech"
-                className="text-white hover:text-yellow-300 transition-colors duration-200"
+                className={`transition-colors duration-200 ${
+                  isScrolled 
+                    ? 'text-gray-700 dark:text-gray-300 hover:text-orange-500' 
+                    : 'text-white hover:text-yellow-300'
+                }`}
               >
                 Tech
               </Link>
@@ -100,7 +124,11 @@ const Header = () => {
               {/* Theme Toggle */}
               <motion.button
                 onClick={toggleTheme}
-                className="p-2 rounded-lg bg-gray-700 hover:bg-gray-600 transition-colors duration-200"
+                className={`p-2 rounded-lg transition-colors duration-200 ${
+                isScrolled 
+                  ? 'bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700' 
+                  : 'bg-gray-700 hover:bg-gray-600'
+              }`}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 aria-label="Toggle theme"
@@ -108,7 +136,11 @@ const Header = () => {
                 <Icon
                   name={theme === 'dark' ? 'sun' : 'moon'}
                   size="md"
-                  className="text-white"
+                  className={`transition-colors duration-300 ${
+                  isScrolled 
+                    ? 'text-gray-700 dark:text-gray-300' 
+                    : 'text-white'
+                }`}
                 />
               </motion.button>
 

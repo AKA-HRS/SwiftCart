@@ -72,44 +72,44 @@ const Home = () => {
         <Container>
           <div className="text-center relative z-10">
             <div className="space-y-8">
-              <motion.h1 
+              <motion.h1
                 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
+                transition={{ duration: 0.8, ease: 'easeOut' }}
               >
                 Discover Amazing
-                <motion.span 
+                <motion.span
                   className="block text-orange-500"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
+                  transition={{ duration: 0.6, ease: 'easeOut', delay: 0.3 }}
                 >
                   Products
                 </motion.span>
               </motion.h1>
 
-              <motion.p 
+              <motion.p
                 className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, ease: "easeOut", delay: 0.5 }}
+                transition={{ duration: 0.6, ease: 'easeOut', delay: 0.5 }}
               >
                 Shop the latest trends in fashion, tech, and lifestyle. Quality
                 products at unbeatable prices.
               </motion.p>
 
-              <motion.div 
+              <motion.div
                 className="flex flex-col sm:flex-row gap-4 justify-center"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, ease: "easeOut", delay: 0.7 }}
+                transition={{ duration: 0.6, ease: 'easeOut', delay: 0.7 }}
               >
                 <Link to="/catalog">
                   <motion.div
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                    transition={{ type: 'spring', stiffness: 400, damping: 17 }}
                   >
                     <Button size="lg" className="w-full sm:w-auto">
                       Shop Now
@@ -120,7 +120,7 @@ const Home = () => {
                   <motion.div
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                    transition={{ type: 'spring', stiffness: 400, damping: 17 }}
                   >
                     <Button
                       variant="outline"
@@ -137,11 +137,11 @@ const Home = () => {
         </Container>
 
         {/* Scroll Indicator */}
-        <motion.div 
+        <motion.div
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut", delay: 1.2 }}
+          transition={{ duration: 0.6, ease: 'easeOut', delay: 1.2 }}
         >
           <motion.div
             animate={{ y: [0, 10, 0] }}
