@@ -1,6 +1,6 @@
-# Modern E-Commerce Store
+# SwiftCart - Modern E-Commerce Store
 
-A modern, responsive e-commerce website built with React, Vite, and Tailwind CSS. Features beautiful animations with Framer Motion, a complete shopping cart system, and a sleek dark/light theme.
+SwiftCart is a modern, responsive e-commerce website built with React, Vite, and Tailwind CSS. Features beautiful animations with Framer Motion, a complete shopping cart system, and a sleek dark/light theme.
 
 ## 🚀 Features
 

@@ -61,9 +61,9 @@ const Footer = () => {
               <div className="w-8 h-8 bg-amazon-orange rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg">A</span>
               </div>
-              <span className="text-xl font-bold text-amazon-white">
-                Amazon Store
-              </span>
+                <span className="text-xl font-bold text-amazon-white">
+                  SwiftCart
+                </span>
             </Link>
             <p className="text-amazon-text-muted mb-6">
               Discover amazing products at great prices. Your one-stop shop for
@@ -203,9 +203,9 @@ const Footer = () => {
           whileInView="animate"
           viewport={{ once: true }}
         >
-          <p className="text-amazon-text-muted text-sm">
-            © {currentYear} Amazon Store. All rights reserved.
-          </p>
+            <p className="text-amazon-text-muted text-sm">
+              © {currentYear} SwiftCart. All rights reserved.
+            </p>
           <div className="flex items-center space-x-4 mt-4 md:mt-0">
             <span className="text-amazon-text-muted text-sm">
               Made with ❤️ for modern shoppers

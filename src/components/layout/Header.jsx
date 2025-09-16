@@ -51,9 +51,9 @@ const Header = () => {
               >
                 <span className="text-white font-bold text-lg">A</span>
               </motion.div>
-              <span className="text-xl font-bold text-amazon-white">
-                Amazon Store
-              </span>
+            <span className="text-xl font-bold text-amazon-white">
+              SwiftCart
+            </span>
             </Link>
 
             {/* Desktop Navigation */}
