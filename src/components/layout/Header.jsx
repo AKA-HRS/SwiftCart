@@ -155,14 +155,14 @@ const Header = () => {
                 whileTap={{ scale: 0.95 }}
                 aria-label="Shopping cart"
               >
-                <Icon 
-                  name="cart" 
-                  size="md" 
+                <Icon
+                  name="cart"
+                  size="md"
                   className={`transition-colors duration-300 ${
                     isScrolled
                       ? 'text-gray-700 dark:text-gray-300'
                       : 'text-white'
-                  }`} 
+                  }`}
                 />
                 {cartItemCount > 0 && (
                   <motion.span
@@ -188,14 +188,14 @@ const Header = () => {
                 whileTap={{ scale: 0.95 }}
                 aria-label="Open menu"
               >
-                <Icon 
-                  name="menu" 
-                  size="md" 
+                <Icon
+                  name="menu"
+                  size="md"
                   className={`transition-colors duration-300 ${
                     isScrolled
                       ? 'text-gray-700 dark:text-gray-300'
                       : 'text-white'
-                  }`} 
+                  }`}
                 />
               </motion.button>
             </div>

@@ -102,14 +102,14 @@ const MobileNav = () => {
                 <Link
                   to="/cart"
                   onClick={handleLinkClick}
-                  className="flex items-center justify-between p-3 rounded-lg bg-primary-50 dark:bg-primary-900/20 text-primary-700 dark:text-primary-300"
+                  className="flex items-center justify-between p-3 rounded-lg bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300"
                 >
                   <div className="flex items-center space-x-3">
                     <Icon name="cart" size="md" />
                     <span className="font-medium">Shopping Cart</span>
                   </div>
                   {cartItemCount > 0 && (
-                    <span className="bg-primary-600 text-white text-sm rounded-full h-6 w-6 flex items-center justify-center">
+                    <span className="bg-orange-600 text-white text-sm rounded-full h-6 w-6 flex items-center justify-center">
                       {cartItemCount}
                     </span>
                   )}
